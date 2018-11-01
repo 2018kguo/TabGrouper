@@ -70,9 +70,16 @@ function moveTab(tabs) {
 			len = tabs.length;
 			// console.log(len);
 			for (var i = 0; i < len; i++) {
-				urls.push(tabs[i].url.replace("https://", "").replace(
-						"chrome://newtab", "zzzz")
-						+ String.fromCharCode(i));
+				if(tabs[i].pinned == true){
+					urls.push("aaaaaaaaaaaaaa" + tabs[i].url.replace("https://", "").replace(
+							"chrome://newtab", "zzzz")
+							+ String.fromCharCode(i));
+				}
+				else{
+					urls.push(tabs[i].url.replace("https://", "").replace(
+							"chrome://newtab", "zzzz")
+							+ String.fromCharCode(i));
+				}
 				// urls.push(tabs[i].url.replace("www.", "")+i.toString());
 				// if(tabs[i].url.includes("https:")){
 				// urls.push(tabs[i].url.replace("www.", "")+i.toString());
